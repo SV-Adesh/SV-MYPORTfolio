@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom styles for transitions */
+  .transition {
+    transition: all 0.5s ease-in-out;
+  }
