@@ -16,6 +16,7 @@ function About() {
           <li className="bg-yellow-300 text-black px-6 py-2 rounded-full shadow-lg">Express.js</li>
           <li className="bg-yellow-300 text-black px-6 py-2 rounded-full shadow-lg">MongoDB</li>
           <li className="bg-yellow-300 text-black px-6 py-2 rounded-full shadow-lg">Cloud</li>
+          <li className="bg-yellow-300 text-black px-6 py-2 rounded-full shadow-lg">Azure</li>
          
          
           
