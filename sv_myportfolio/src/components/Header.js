@@ -27,7 +27,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="/SV-resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-transform duration-500 ease-in-out hover:scale-110">
+            <a href="https://drive.google.com/file/d/155ccetiVfKAWnCsP30tGXDHSjHCnGWcz/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-transform duration-500 ease-in-out hover:scale-110">
               <FaFileAlt style={{ fontSize: '2em', color: '#ffcc00' }} />
             </a>
           </li>
