@@ -8,17 +8,18 @@ const projects = [
     imageUrl: `${process.env.PUBLIC_URL}/img/pro5.png`,
     link: 'https://sv-tic-tac-toe-frontend.onrender.com/'
   },
-  {
-    title: 'Predictive Modeling for Early Detection of Disease',
-    description: 'Accurate image detection in machine learning relies on the quality and alignment of input images.',
-    imageUrl: `${process.env.PUBLIC_URL}/img/pro2.jpg`,
-    
-  },
+
   {
     title: 'Watch Together',
     description: 'A collaborative video-watching platform where users can sync video playback with friends in real time using Socket.IO and modern React features.',
     imageUrl: `${process.env.PUBLIC_URL}/img/pro4.png`,
     link: 'https://watchtogether-tawny.vercel.app/'
+  },
+  {
+    title: 'Predictive Modeling for Early Detection of Disease',
+    description: 'Accurate image detection in machine learning relies on the quality and alignment of input images.',
+    imageUrl: `${process.env.PUBLIC_URL}/img/pro2.jpg`,
+    
   },
   {
     title: 'Secure Portal for Company',
