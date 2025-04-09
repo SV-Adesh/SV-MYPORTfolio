@@ -1,11 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
+
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
   
-  /* Custom styles for transitions */
-  .transition {
-    transition: all 0.5s ease-in-out;
+  body {
+    @apply bg-black text-white;
+    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
   }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-gray-900/30 backdrop-blur-lg border border-gray-800/50 rounded-xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-500;
+  }
+}
+
+/* Custom styles for transitions */
+.transition {
+  transition: all 0.5s ease-in-out;
+}
