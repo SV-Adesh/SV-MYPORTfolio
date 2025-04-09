@@ -42,11 +42,11 @@ function Footer() {
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="text-yellow-400 mr-4 text-xl" />
-                <a href="mailto:adesh@example.com" className="hover:text-yellow-400 transition-colors">adesh@example.com</a>
+                <a href="mailto:adeshshetty3333@gmail.com" className="hover:text-yellow-400 transition-colors">adesh@example.com</a>
               </li>
               <li className="flex items-center">
                 <FaPhoneAlt className="text-yellow-400 mr-4 text-xl" />
-                <a href="tel:+9112345678" className="hover:text-yellow-400 transition-colors">+91 12345 67890</a>
+                <a href="tel:+918147186372" className="hover:text-yellow-400 transition-colors">+91 12345 67890</a>
               </li>
             </ul>
             
