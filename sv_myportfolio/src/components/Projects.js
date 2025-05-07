@@ -6,33 +6,35 @@ const projects = [
     title: 'Tic Tac Toe Multiplayer',
     description: 'A real-time multiplayer Tic Tac Toe game built using React and WebSockets. Players can create or join rooms and play seamlessly across devices.',
     imageUrl: `${process.env.PUBLIC_URL}/img/pro5.png`,
-    link: 'https://sv-tic-tac-toe-frontend.onrender.com/'
+    link: 'https://sv-tic-tac-toe-frontend.onrender.com/',
+    showDemo: true
   },
 
   {
     title: 'Watch Together',
     description: 'A collaborative video-watching platform where users can sync video playback with friends in real time using Socket.IO and modern React features.',
     imageUrl: `${process.env.PUBLIC_URL}/img/pro4.png`,
-    link: 'https://watchtogether-tawny.vercel.app/'
+    link: 'https://watchtogether-tawny.vercel.app/',
+    showDemo: true
   },
   {
     title: 'Predictive Modeling for Early Detection of Disease',
     description: 'Accurate image detection in machine learning relies on the quality and alignment of input images.',
     imageUrl: `${process.env.PUBLIC_URL}/img/pro2.jpg`,
-    
+    showDemo: false
   },
   {
     title: 'Secure Portal for Company',
     description: 'A secure portal using React.js and Express.js, addressing the need for a content management system.',
     imageUrl: `${process.env.PUBLIC_URL}/img/pro6.png`,
-   
+    showDemo: false
   },
  
   {
     title: 'Insurance Management System',
     description: 'Designed a super helpful tool for insurance companies to keep track of policies, claims, and customer info all in one place.',
     imageUrl: `${process.env.PUBLIC_URL}/img/pro3.png`,
-   
+    showDemo: false
   },
 ];
 
@@ -94,17 +96,19 @@ function Projects() {
             </div>
             <h3 className="text-2xl font-semibold mb-2 text-yellow-400">{project.title}</h3>
             <p className="text-gray-300 mb-4">{project.description}</p>
-            <div className="flex justify-end">
-              <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-yellow-500 text-black font-medium rounded-lg
-                        transition-all duration-300 hover:bg-yellow-400 transform hover:scale-105"
-              >
-                Live Demo
-              </a>
-            </div>
+            {project.showDemo && (
+              <div className="flex justify-end">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-2 bg-yellow-500 text-black font-medium rounded-lg
+                          transition-all duration-300 hover:bg-yellow-400 transform hover:scale-105"
+                >
+                  Live Demo
+                </a>
+              </div>
+            )}
           </motion.div>
         ))}
       </motion.div>
