@@ -61,13 +61,13 @@ function App() {
     <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen relative">
       <AnimatedBackground />
       <div className="container mx-auto px-4 relative z-10">
-        <Header />
-        <main>
-          <Hero />
-          <Projects />
-          <About />
-        </main>
-        <Footer />
+      <Header /> 
+      <main>
+        <Hero />
+        <Projects />
+        <About />
+      </main>
+      <Footer />
       </div>
     </div>
   );

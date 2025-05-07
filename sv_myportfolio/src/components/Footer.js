@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 function Footer() {
+  const formRef = useRef();
+
   const contactVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -12,6 +15,27 @@ function Footer() {
         duration: 0.6
       }
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Show loading indicator or disable button here if desired
+    
+    emailjs.sendForm(
+      'service_h92eils', 
+      'template_41lk10y',
+      formRef.current,
+      'XYYRfSDq3CUud1Zjn'
+    )
+    .then((result) => {
+      console.log('SUCCESS!', result.text);
+      alert('Message sent successfully!');
+      formRef.current.reset();
+    }, (error) => {
+      console.log('FAILED...', error.text, error);
+      alert('Failed to send message. Please try again later.');
+    });
   };
 
   return (
@@ -81,26 +105,32 @@ function Footer() {
             transition={{ delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Send Message</h3>
-            <form>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <div className="mb-4">
                 <input 
                   type="text" 
+                  name="from_name"
                   placeholder="Your Name" 
                   className="w-full bg-gray-800/50 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all"
+                  required
                 />
               </div>
               <div className="mb-4">
                 <input 
                   type="email" 
+                  name="reply_to"
                   placeholder="Your Email" 
                   className="w-full bg-gray-800/50 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all"
+                  required
                 />
               </div>
               <div className="mb-4">
                 <textarea 
+                  name="message"
                   placeholder="Your Message" 
                   rows="4"
                   className="w-full bg-gray-800/50 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all"
+                  required
                 ></textarea>
               </div>
               <motion.button 

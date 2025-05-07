@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+html {
     scroll-behavior: smooth;
   }
   
@@ -22,9 +22,9 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-500;
   }
-}
-
-/* Custom styles for transitions */
-.transition {
-  transition: all 0.5s ease-in-out;
-}
+  }
+  
+  /* Custom styles for transitions */
+  .transition {
+    transition: all 0.5s ease-in-out;
+  }
