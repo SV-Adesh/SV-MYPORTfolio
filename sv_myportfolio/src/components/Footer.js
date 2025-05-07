@@ -109,7 +109,7 @@ function Footer() {
               <div className="mb-4">
                 <input 
                   type="text" 
-                  name="user_name"
+                  name="name"
                   placeholder="Your Name" 
                   className="w-full bg-gray-800/50 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all"
                   required
@@ -118,7 +118,7 @@ function Footer() {
               <div className="mb-4">
                 <input 
                   type="email" 
-                  name="user_email"
+                  name="email"
                   placeholder="Your Email" 
                   className="w-full bg-gray-800/50 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all"
                   required
