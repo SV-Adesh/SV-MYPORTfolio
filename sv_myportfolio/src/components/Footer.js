@@ -23,10 +23,10 @@ function Footer() {
     // Show loading indicator or disable button here if desired
     
     emailjs.sendForm(
-      'service_h92eils', 
-      'template_41lk10y',
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
       formRef.current,
-      'XYYRfSDq3CUud1Zjn'
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
     .then((result) => {
       console.log('SUCCESS!', result.text);
